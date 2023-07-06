@@ -1,8 +1,9 @@
 const Controls = ({ current, total, onChange }) => {
   return (
-    <section>
+    <section className="d-grid gap-2 d-md-flex justify-content-md-start">
       <button
         type="button"
+        className="btn btn-primary"
         disabled={current === 1}
         onClick={() => {
           onChange(-1);
@@ -12,6 +13,7 @@ const Controls = ({ current, total, onChange }) => {
       </button>
       <button
         type="button"
+        className="btn  btn-primary"
         disabled={current === total}
         onClick={() => {
           onChange(1);
