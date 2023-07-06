@@ -33,10 +33,17 @@ export default class Reader extends Component {
     const totalItem = items.length;
 
     return (
-      <div>
-        <Controls current={index + 1} total={totalItem} onChange={this.changeIndex}></Controls>
+      <div className="container text-left">
+        <Controls
+          current={index + 1}
+          total={totalItem}
+          onChange={this.changeIndex}
+        ></Controls>
         <Progress current={index + 1} total={totalItem}></Progress>
-        <Publication title={currentItem.title} text={currentItem.text}></Publication>
+        <Publication
+          title={currentItem.title}
+          text={currentItem.text}
+        ></Publication>
       </div>
     );
   }
